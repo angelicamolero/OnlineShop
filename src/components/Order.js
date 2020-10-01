@@ -20,8 +20,7 @@ const Order = () => {
     
     <div className="row">
       <div className="u-full-width eleven column order-info">
-       <p><strong>Order Number:</strong> #120930923</p>
-       <p><strong>Status:</strong> Delivered</p>
+       <p><strong>Status:</strong> Pending</p>
        <p><strong>Fecha:</strong> {new Date().toDateString()}</p>
        <p><strong>Name:</strong> {name}</p>
        <div className="order-emailphone">
