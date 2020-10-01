@@ -63,7 +63,7 @@ const Order = () => {
          <h4><strong>Total:</strong> {sumTotal(cart)}</h4>
        </div>
      </div>
-    <button onClick={() => createOrder()}>Finalizar</button>
+    <button onClick={() => createOrder()}>Complete Order</button>
   </div>
     );
 }
