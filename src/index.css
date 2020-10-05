@@ -611,3 +611,40 @@ footer .container .row {
   position: relative;
   left: 25%;
 }
+
+/* CATEGORIES */
+
+.categories {
+  border: 2px solid #fbb710;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height:10rem;
+  border-radius: 2em;
+  width: 50%;
+  position: relative;
+  left: 25%;
+}
+
+.left {
+  margin-left: 84px;
+}
+
+.categories .category {
+  display: flex;
+  flex-direction: row;
+  }
+
+.category button {
+    padding: 2px 24px !important;
+    background-color: #fbb710 !important;
+    border-radius: .7em !important;
+    border: none !important;
+    height: 53px !important;
+    cursor: pointer !important;
+    font-family: var(--main-font);
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    position: relative;
+}

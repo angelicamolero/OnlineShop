@@ -14,6 +14,7 @@ import Footer from './components/footer';
 import Error from './components/Error';
 import FormCheckout from './components/FormCheckout';
 import Order from './components/Order';
+import Categories from './components/Categories';
 
 /////////////////////////////////////////////////////////////////
 import CartProvider from './context/CartContext';
@@ -31,6 +32,9 @@ function App() {
               <div className="row">
                 <LeftBar/>
                 <Switch>
+                <Route exact path="/">
+                    <Categories/>
+                  </Route>
                   <Route exact path="/">
                     <Products/>
                   </Route>
