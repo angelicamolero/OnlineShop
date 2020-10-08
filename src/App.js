@@ -35,14 +35,14 @@ function App() {
                 <Route exact path="/">
                     <Categories/>
                   </Route>
-                  <Route exact path="/">
-                    <Products/>
-                  </Route>
                   <Route exact path="/cart">
                     <Cart/>
                   </Route>
                   <Route exact path="/item/:id">
                     <Details/>
+                  </Route>
+                  <Route exact path="/categories/:type">
+                    <Products/>
                   </Route>
                   <Route exact path="/contact">
                     <Contact/>

@@ -13,6 +13,25 @@ const Details = () => {
 
     const { id } = useParams();
 
+    const categoryRoute = (name) => {
+        let route = null;
+
+        switch (true) {
+            case name.toLowerCase().includes('captus'):
+                route = 'captus';
+                break;
+            case name.toLowerCase().includes('leaf'):
+                route = 'leaf'
+                break;
+            default:
+                route = 'others'
+                break;
+        }
+
+        return route
+    }
+
+
     const details = dataJson.filter(item => item.id === id);
 
    return (
@@ -36,7 +55,7 @@ const Details = () => {
                                 >{cart.find(item => item.id === d.id) ? 'ADD MORE' : 'ADD TO CART'}</button>
                                 {cart.find(item => item.id === d.id && item.quantity > 0) && <span>You have {cart.find(item => item.id === d.id).quantity} plants in your cart!</span>}
                             </div>
-                            <Link to={'/'} className='goBack'><i className="fas fa-arrow-left"></i></Link>
+                            <Link to={`/categories/${categoryRoute(d.name)}`} className='goBack'><i className="fas fa-arrow-left"></i></Link>
                         </div>
                     </div>
                 )

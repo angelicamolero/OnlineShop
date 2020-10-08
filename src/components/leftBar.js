@@ -2,7 +2,7 @@ import React, { Fragment, useContext } from 'react';
 import {Link} from 'react-router-dom';
 ////////////////////////////////////////////////////
 import {CartContext} from '../context/CartContext';
-import {ProductContext} from '../context/ProductContext';
+//import {ProductContext} from '../context/ProductContext';
 ///////////////////////////////////////////////////
 import logo from '../img/logo.jpg';
 ///////////////////////////////////////////////////
@@ -11,10 +11,10 @@ import logo from '../img/logo.jpg';
 const LeftBar = () => {
 
     const cartContext = useContext(CartContext);
-    const productContext = useContext(ProductContext);
+    //const productContext = useContext(ProductContext);
 
     const { qty } = cartContext;
-    const { searching, search } = productContext
+    //const { searching, search } = productContext
 
     return (
         <Fragment>
@@ -40,11 +40,11 @@ const LeftBar = () => {
                             <input 
                                 className="" 
                                 id="search-box" 
-                                value={searching}
+                                //value={searching}
                                 type="text" 
                                 placeholder="Search" 
                                 aria-label="Search"
-                                onChange={search}    
+                                //onChange={search}    
                             />
                             <i className="fas fa-search text-grey search-icon"></i>
                         </div>

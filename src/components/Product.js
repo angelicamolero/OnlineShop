@@ -1,5 +1,5 @@
 import React, { Fragment, useContext} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 
 ////////////////////////////////////////////////////////
 import {CartContext} from '../context/CartContext';
@@ -9,15 +9,19 @@ import {ProductContext} from '../context/ProductContext';
 
 const Product = () => {
 
-
     const cartContext = useContext(CartContext);
     const productContext = useContext(ProductContext);
 
     const { cart, selectProduct, addMore } = cartContext;
-    const { dataJson} = productContext;
+    const { dataJson } = productContext;
+
+    const { type } = useParams();
+
+    const newList = (type === 'others') ? dataJson.filter(item => (item.category !== 'leaf' && item.category !== 'captus')): dataJson.filter(item => item.category === type)
+
     return( 
         <Fragment>
-            {dataJson.map(data => {
+            {newList.map(data => {
                 const images = require(`../img/${data.img}`)
                 return (
                     <div className="products-container" key={data.id}>

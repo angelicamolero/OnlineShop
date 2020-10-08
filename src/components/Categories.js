@@ -1,20 +1,36 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 
 const Categories = () => {
+
     return(
-        <div class="container">
-        <div class="row contact-headline">
+        <div classNameName="container">
+        <div className="row contact-headline">
             <h3>Choose a Category</h3>
         </div>
-        <div class="row categories">
-          <div class="category left">
-             <button>Captus</button>
+        <div className="row categories">
+          <div className="category left">
+                <Link
+                    to={`/categories/captus`}
+                >
+                    <button
+                    >Captus</button>
+                </Link>
           </div>
-          <div class="category">
-              <button>Big Leaf</button>
+          <div classNameName="category">
+                <Link
+                    to={`/categories/leaf`}
+                >
+                    <button>Big Leaf</button>
+                </Link>
           </div>
-          <div class="category">
-              <button>Others</button>
+          <div classNameName="category">
+                <Link
+                    to={`/categories/others`}
+                >
+                    <button>Others</button>
+                </Link>
           </div>
        </div>
  </div>
