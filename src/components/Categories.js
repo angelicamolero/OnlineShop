@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 const Categories = () => {
 
     return(
-        <div classNameName="container">
+        <div className="container">
         <div className="row contact-headline">
             <h3>Choose a Category</h3>
         </div>
@@ -18,14 +18,14 @@ const Categories = () => {
                     >Captus</button>
                 </Link>
           </div>
-          <div classNameName="category">
+          <div className="category">
                 <Link
                     to={`/categories/leaf`}
                 >
                     <button>Big Leaf</button>
                 </Link>
           </div>
-          <div classNameName="category">
+          <div className="category">
                 <Link
                     to={`/categories/others`}
                 >
