@@ -13,15 +13,17 @@ const Product = () => {
     const productContext = useContext(ProductContext);
 
     const { cart, selectProduct, addMore } = cartContext;
-    const { dataJson } = productContext;
+    const { dataJson, setCategoryName } = productContext;
 
     const { type } = useParams();
 
-    const newList = (type === 'others') ? dataJson.filter(item => (item.category !== 'leaf' && item.category !== 'captus')): dataJson.filter(item => item.category === type)
+    if(type){
+        setCategoryName(type)
+    }
 
     return( 
         <Fragment>
-            {newList.map(data => {
+            {dataJson?.map(data => {
                 const images = require(`../img/${data.img}`)
                 return (
                     <div className="products-container" key={data.id}>
